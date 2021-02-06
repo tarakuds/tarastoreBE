@@ -4,7 +4,9 @@ const Product = require('./models/products')
 const port = process.env.PORT || 8080
 //const port = 8080
 const app = express()
+const cors = require('cors')
 app.use(express.json())
+app.use(cors())
 
 app.get('/', (req,res)=>{
     res.send("<h1>This is the Homepage</h1>")
